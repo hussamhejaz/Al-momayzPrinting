@@ -1,0 +1,82 @@
+/* LoadingPage.css */
+
+/* Updated background gradient */
+.loading-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #002C44, #006699); /* Dark blue tones */
+    padding: 20px;
+  }
+  
+  /* Creative loader */
+  .creative-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .square {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    animation: flip 2s infinite;
+    border-radius: 8px;
+  }
+  
+  .square.delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .square.delay-400 {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes flip {
+    0% {
+      transform: rotateY(0);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  /* Custom text color */
+  .text-white {
+    color: #ffffff;
+  }
+  
+  /* Custom colors */
+  .bg-custom-blue {
+    background-color: #004B66;
+  }
+  
+  .bg-custom-light-blue {
+    background-color: #006699;
+  }
+  
+  .bg-custom-dark-blue {
+    background-color: #002C44;
+  }
+  
+  /* Add a smooth animation for the loading text */
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .animate-pulse {
+    animation: pulse 1.5s infinite;
+  }
+  

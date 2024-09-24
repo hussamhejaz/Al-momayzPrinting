@@ -22,12 +22,12 @@ const AboutSection = ({ language }) => {
           <p className="text-lg text-gray-600 mb-4">
             {isEnglish
               ? 'At Al-Momayz Printing, we strive to offer comprehensive printing solutions for various businesses and fields. Our team consists of professional designers and experienced print technicians. We are committed to high quality, competitive prices, and fast services to meet our customers’ needs.'
-              : 'نحن في مطابع المميز نسعى لتقديم حلول طباعة شاملة لمختلف الأعمال والمجالات، مع فريق من المصممين المحترفين وفنيي الطباعة ذوي الخبرة. نلتزم بالجودة العالية، الأسعار التنافسية، والخدمات السريعة لتلبية متطلبات عملائنا.'}
+              : '.نحن في مطابع المميز نسعى لتقديم حلول طباعة شاملة لمختلف الأعمال والمجالات، مع فريق من المصممين المحترفين وفنيي الطباعة ذوي الخبرة. نلتزم بالجودة العالية، الأسعار التنافسية، والخدمات السريعة لتلبية متطلبات عملائنا'}
           </p>
           <p className="text-lg text-gray-600 mb-4">
             {isEnglish
               ? 'We focus on sustainability and development, always aiming to use the latest printing technologies to meet our clients’ expectations and achieve their full satisfaction.'
-              : 'نركز على الاستمرارية والتطوير، حيث نسعى دائمًا لاستخدام أحدث تقنيات الطباعة لضمان تلبية تطلعات عملائنا وتحقيق رضاهم الكامل.'}
+              : '.نركز على الاستمرارية والتطوير، حيث نسعى دائمًا لاستخدام أحدث تقنيات الطباعة لضمان تلبية تطلعات عملائنا وتحقيق رضاهم الكامل'}
           </p>
         </motion.div>
 

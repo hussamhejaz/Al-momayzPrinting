@@ -36,7 +36,7 @@ const ClientsSection = ({ language }) => {
           {clients.map((client, index) => (
             <motion.div
               key={index}
-              className="flex justify-center items-center p-4 bg-white rounded-lg shadow-lg"
+              className="flex justify-center items-center p-4 style={{ backgroundColor: 'transparent' }}  shadow-lg"
               whileHover={{ scale: 1.1 }} // Scale up on hover
               initial={{ opacity: 0, y: 50 }} // Start with logo hidden and below the view
               whileInView={{ opacity: 1, y: 0 }} // Animate when logo comes into view
@@ -46,6 +46,9 @@ const ClientsSection = ({ language }) => {
                 src={client.logo}
                 alt={client.name}
                 className="w-full h-32 sm:h-40 lg:h-48 object-contain"
+                draggable="false" // Disable dragging
+                onContextMenu={(e) => e.preventDefault()} // Disable right-click menu (prevents saving image)
+                style={{ backgroundColor: 'transparent' }} // Make the background transparent
               />
             </motion.div>
           ))}

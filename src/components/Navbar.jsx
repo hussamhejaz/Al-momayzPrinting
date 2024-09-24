@@ -52,7 +52,7 @@ function Navbar({ language, toggleLanguage }) {
             {isEnglish ? 'Contact' : 'اتصل بنا'}
           </a>
 
-          {/* Language Switcher */}
+          {/* Language Switcher (Desktop) */}
           <div className="relative">
             <button
               onClick={toggleLanguageOptions}
@@ -84,7 +84,38 @@ function Navbar({ language, toggleLanguage }) {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center space-x-4">
+          {/* Language Icon with Dropdown (Mobile) */}
+          <div className="relative">
+            <button
+              onClick={toggleLanguageOptions}
+              className="text-gray-700 hover:text-blue-500 focus:outline-none"
+            >
+              <FontAwesomeIcon icon={faGlobe} className="w-6 h-6" />
+            </button>
+            {showLanguageOptions && (
+              <div className="absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-lg z-20">
+                <a
+                  href="#"
+                  onClick={() => handleLanguageSelection('en')}
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100"
+                >
+                  <img src={englishFlag} alt="English" className="w-5 h-5" />
+                  <span>English</span>
+                </a>
+                <a
+                  href="#"
+                  onClick={() => handleLanguageSelection('ar')}
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100"
+                >
+                  <img src={saudiFlag} alt="Arabic" className="w-5 h-5" />
+                  <span>العربية</span>
+                </a>
+              </div>
+            )}
+          </div>
+
+          {/* Hamburger Menu Toggle Button */}
           <button
             onClick={toggleMenu}
             className="text-gray-700 hover:text-blue-500 focus:outline-none"
@@ -143,36 +174,6 @@ function Navbar({ language, toggleLanguage }) {
           >
             {isEnglish ? 'Contact' : 'اتصل بنا'}
           </a>
-
-          {/* Mobile Language Switcher */}
-          <div className="block px-4 py-2 text-gray-700 hover:text-blue-500 flex justify-center">
-            <button
-              onClick={toggleLanguageOptions}
-              className="text-gray-700 hover:text-blue-500 focus:outline-none"
-            >
-              <FontAwesomeIcon icon={faGlobe} className="w-6 h-6" />
-            </button>
-            {showLanguageOptions && (
-              <div className="absolute mt-2 w-32 bg-white shadow-lg rounded-lg">
-                <a
-                  href="#"
-                  onClick={() => handleLanguageSelection('en')}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100"
-                >
-                  <img src={englishFlag} alt="English" className="w-5 h-5" />
-                  <span>English</span>
-                </a>
-                <a
-                  href="#"
-                  onClick={() => handleLanguageSelection('ar')}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100"
-                >
-                  <img src={saudiFlag} alt="Arabic" className="w-5 h-5" />
-                  <span>العربية</span>
-                </a>
-              </div>
-            )}
-          </div>
         </div>
       )}
     </nav>

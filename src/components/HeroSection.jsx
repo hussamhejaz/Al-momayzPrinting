@@ -95,7 +95,7 @@ const HeroSection = ({ language }) => {
                 className="text-lg md:text-2xl text-white mt-4 max-w-2xl drop-shadow-md"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+                transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
               >
                 {slide.description}
               </motion.p>

@@ -196,7 +196,7 @@ const ServicesSection = ({ language }) => {
               whileHover={{ scale: 1.05 }} // Animation on hover
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
             >
               <img
                 src={service.imageUrl}

@@ -15,7 +15,7 @@ import AboutSection from './components/ AboutSection'; // Fixed import
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [language, setLanguage] = useState('en'); // Add language state for toggle
+  const [language, setLanguage] = useState('ar'); // Add language state for toggle
 
   // Simulate loading time (e.g., fetching data, loading assets)
   useEffect(() => {

@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // For animations
-import logo from "../imgs/logo.svg"; 
+import aboutus from "../imgs/aboutus.jpg"; 
 
 const AboutSection = ({ language }) => {
   const isEnglish = language === 'en';
 
   return (
     <section id="about" className="py-12 bg-gray-100 w-full">
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
+      <div className="container mx-auto flex flex-col md:flex-row md:space-x-8 items-center px-4 md:px-8"> {/* Add md:space-x-8 for horizontal space */}
         
         {/* Text Section */}
         <motion.div
@@ -39,7 +39,7 @@ const AboutSection = ({ language }) => {
           transition={{ duration: 0.7 }}
         >
           <img
-            src={logo}
+            src={aboutus}
             alt={isEnglish ? 'About us' : 'من نحن'}
             className="rounded-lg shadow-lg w-full object-cover h-64 md:h-80"
           />

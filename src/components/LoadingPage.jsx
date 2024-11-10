@@ -13,7 +13,7 @@ function LoadingPage() {
         </div>
         {/* Loading Text with Animation */}
         <h2 className="text-white text-xl mt-4 animate-pulse">
-          Preparing Your Printing Experience...
+          Preparing Your Printing Experience....
         </h2>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import logo from "../imgs/logo.svg"; // Ensure logo path is correct
+import { Link as ScrollLink } from "react-scroll";
+import logo from "../imgs/logo.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'; // Import the globe icon
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-// Use online URLs for flags
 const saudiFlag = "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg";
 const englishFlag = "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg";
 
@@ -21,7 +21,7 @@ function Navbar({ language, toggleLanguage }) {
 
   const handleLanguageSelection = (lang) => {
     toggleLanguage(lang);
-    setShowLanguageOptions(false); // Close dropdown after selection
+    setShowLanguageOptions(false);
   };
 
   const isEnglish = language === 'en';
@@ -39,18 +39,18 @@ function Navbar({ language, toggleLanguage }) {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 items-center">
-          <a href="/" className="text-gray-700 hover:text-blue-500">
+          <ScrollLink to="home" smooth={true} duration={1000} className="text-gray-700 hover:text-blue-500 cursor-pointer">
             {isEnglish ? 'Home' : 'الرئيسية'}
-          </a>
-          <a href="#about" className="text-gray-700 hover:text-blue-500">
+          </ScrollLink>
+          <ScrollLink to="about" smooth={true} duration={1000} className="text-gray-700 hover:text-blue-500 cursor-pointer">
             {isEnglish ? 'About' : 'من نحن'}
-          </a>
-          <a href="#services" className="text-gray-700 hover:text-blue-500">
+          </ScrollLink>
+          <ScrollLink to="services" smooth={true} duration={1000} className="text-gray-700 hover:text-blue-500 cursor-pointer">
             {isEnglish ? 'Services' : 'الخدمات'}
-          </a>
-          <a href="#contact" className="text-gray-700 hover:text-blue-500">
+          </ScrollLink>
+          <ScrollLink to="contact" smooth={true} duration={1000} className="text-gray-700 hover:text-blue-500 cursor-pointer">
             {isEnglish ? 'Contact' : 'اتصل بنا'}
-          </a>
+          </ScrollLink>
 
           {/* Language Switcher (Desktop) */}
           <div className="relative">
@@ -62,63 +62,57 @@ function Navbar({ language, toggleLanguage }) {
             </button>
             {showLanguageOptions && (
               <div className="absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-lg z-20">
-                <a
-                  href="#"
+                <button
                   onClick={() => handleLanguageSelection('en')}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100"
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 w-full text-left"
                 >
                   <img src={englishFlag} alt="English" className="w-5 h-5" />
                   <span>English</span>
-                </a>
-                <a
-                  href="#"
+                </button>
+                <button
                   onClick={() => handleLanguageSelection('ar')}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100"
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 w-full text-left"
                 >
                   <img src={saudiFlag} alt="Arabic" className="w-5 h-5" />
                   <span>العربية</span>
-                </a>
+                </button>
               </div>
             )}
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button and Language Switcher */}
         <div className="md:hidden flex items-center space-x-4">
-          {/* Language Icon with Dropdown (Mobile) */}
-          <div className="relative">
-            <button
-              onClick={toggleLanguageOptions}
-              className="text-gray-700 hover:text-blue-500 focus:outline-none"
-            >
-              <FontAwesomeIcon icon={faGlobe} className="w-6 h-6" />
-            </button>
-            {showLanguageOptions && (
-              <div className="absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-lg z-20">
-                <a
-                  href="#"
-                  onClick={() => handleLanguageSelection('en')}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100"
-                >
-                  <img src={englishFlag} alt="English" className="w-5 h-5" />
-                  <span>English</span>
-                </a>
-                <a
-                  href="#"
-                  onClick={() => handleLanguageSelection('ar')}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100"
-                >
-                  <img src={saudiFlag} alt="Arabic" className="w-5 h-5" />
-                  <span>العربية</span>
-                </a>
-              </div>
-            )}
-          </div>
+          {/* Language Icon (Mobile) */}
+          <button
+            onClick={toggleLanguageOptions}
+            className="text-gray-700 hover:text-blue-500 focus:outline-none relative z-30"
+          >
+            <FontAwesomeIcon icon={faGlobe} className="w-6 h-6" />
+          </button>
+          {showLanguageOptions && (
+            <div className="absolute top-16 right-4 w-32 bg-white shadow-lg rounded-lg z-20">
+              <button
+                onClick={() => handleLanguageSelection('en')}
+                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 w-full text-left"
+              >
+                <img src={englishFlag} alt="English" className="w-5 h-5" />
+                <span>English</span>
+              </button>
+              <button
+                onClick={() => handleLanguageSelection('ar')}
+                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 w-full text-left"
+              >
+                <img src={saudiFlag} alt="Arabic" className="w-5 h-5" />
+                <span>العربية</span>
+              </button>
+            </div>
+          )}
 
           {/* Hamburger Menu Toggle Button */}
           <button
             onClick={toggleMenu}
-            className="text-gray-700 hover:text-blue-500 focus:outline-none"
+            className="text-gray-700 hover:text-blue-500 focus:outline-none relative z-20"
           >
             <svg
               className="w-6 h-6"
@@ -150,30 +144,18 @@ function Navbar({ language, toggleLanguage }) {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg">
-          <a
-            href="#home"
-            className="block px-4 py-2 text-gray-700 hover:text-blue-500"
-          >
+          <ScrollLink to="home" smooth={true} duration={1000} className="block px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer">
             {isEnglish ? 'Home' : 'الرئيسية'}
-          </a>
-          <a
-            href="#services"
-            className="block px-4 py-2 text-gray-700 hover:text-blue-500"
-          >
+          </ScrollLink>
+          <ScrollLink to="services" smooth={true} duration={1000} className="block px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer">
             {isEnglish ? 'Services' : 'الخدمات'}
-          </a>
-          <a
-            href="#about"
-            className="block px-4 py-2 text-gray-700 hover:text-blue-500"
-          >
+          </ScrollLink>
+          <ScrollLink to="about" smooth={true} duration={1000} className="block px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer">
             {isEnglish ? 'About' : 'من نحن'}
-          </a>
-          <a
-            href="#contact"
-            className="block px-4 py-2 text-gray-700 hover:text-blue-500"
-          >
+          </ScrollLink>
+          <ScrollLink to="contact" smooth={true} duration={1000} className="block px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer">
             {isEnglish ? 'Contact' : 'اتصل بنا'}
-          </a>
+          </ScrollLink>
         </div>
       )}
     </nav>

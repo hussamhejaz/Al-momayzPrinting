@@ -14,7 +14,7 @@ const ContactSection = ({ language }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {isEnglish ? 'Contact Us' : 'تواصل معنا'}
+            {isEnglish ? 'Contact Us' : 'معلومات الاتصال'}
           </motion.h2>
           <motion.p
             className="text-lg text-gray-600 mt-2"
@@ -23,104 +23,40 @@ const ContactSection = ({ language }) => {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             {isEnglish
-              ? 'We welcome your questions and inquiries. You can contact us using the form below or through the following details.'
-              : 'نرحب بأسئلتك واستفساراتك. يمكنك الاتصال بنا باستخدام النموذج أدناه أو المعلومات التالية.'}
+              ? 'You can reach us via phone or email.'
+              : 'يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني.'}
           </motion.p>
         </div>
 
-        {/* Contact Form and Details */}
-        <div className="flex flex-wrap -mx-4">
-          {/* Contact Form */}
-          <motion.div
-            className="w-full lg:w-2/3 px-4"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <form className="bg-white p-8 shadow-lg rounded-lg">
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                  {isEnglish ? 'Full Name' : 'الاسم الكامل'}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                  placeholder={isEnglish ? 'Enter your full name' : 'أدخل اسمك الكامل'}
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                  {isEnglish ? 'Email' : 'البريد الإلكتروني'}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                  placeholder={isEnglish ? 'Enter your email' : 'أدخل بريدك الإلكتروني'}
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                  {isEnglish ? 'Your Message' : 'رسالتك'}
-                </label>
-                <textarea
-                  id="message"
-                  rows="5"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                  placeholder={isEnglish ? 'Enter your message' : 'أدخل رسالتك'}
-                  required
-                ></textarea>
-              </div>
-              <div className="text-right">
-                <button
-                  type="submit"
-                  className="bg-green-500 hover:bg-green-400 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all transform hover:scale-105"
-                >
-                  {isEnglish ? 'Send Message' : 'أرسل الرسالة'}
-                </button>
-              </div>
-            </form>
-          </motion.div>
-
-          {/* Contact Details */}
-          <motion.div
-            className="w-full lg:w-1/3 px-4 mt-8 lg:mt-0"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-          >
-            <div className="bg-white p-8 shadow-lg rounded-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">
-                {isEnglish ? 'Contact Information' : 'معلومات الاتصال'}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {isEnglish
-                  ? 'You can reach us via phone or email.'
-                  : 'يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني.'}
-              </p>
-              <ul className="space-y-4 text-gray-600">
-                <li>
-                  <span className="font-bold">{isEnglish ? 'Phone:' : 'هاتف:'}</span> 0530963426
-                </li>
-                <li>
-                  <span className="font-bold">{isEnglish ? 'Email:' : 'البريد الإلكتروني:'}</span>{" "}
-                  <a href="mailto:ah.adversting@gmail.com" className="text-green-500 underline">
-                    ah.adversting@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <span className="font-bold">{isEnglish ? 'Address:' : 'العنوان:'}</span>{" "}
-                  {isEnglish
-                    ? 'Saudi Arabia – Riyadh – Al-Farazdaq Street'
-                    : 'المملكة العربية السعودية – الرياض – شارع الفرزدق'}
-                </li>
-              </ul>
-            </div>
-          </motion.div>
-        </div>
+        {/* Contact Details */}
+        <motion.div
+          className="w-full md:w-2/3 lg:w-1/2 mx-auto bg-white p-8 shadow-lg rounded-lg"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+        >
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+            {isEnglish ? 'Get in Touch' : 'تواصل معنا'}
+          </h3>
+          <div className="text-gray-700 text-center leading-loose">
+            <p className="mb-4">
+              <span className="font-semibold text-gray-900">
+                {isEnglish ? 'Phone:' : 'هاتف:'}
+              </span>{' '}
+              0530963426
+            </p>
+            
+           
+            <p>
+              <span className="font-semibold text-gray-900">
+                {isEnglish ? 'Address:' : 'العنوان:'}
+              </span>{' '}
+              {isEnglish
+                ? 'Saudi Arabia – Riyadh – Al-Farazdaq Street'
+                : 'المملكة العربية السعودية – الرياض – شارع الفرزدق'}
+            </p>
+          </div>
+        </motion.div>
 
         {/* Map Section */}
         <motion.div

@@ -10,7 +10,7 @@ const slidesContent = {
     {
       image: sider,
       title: "We Create Ideas That Impress You",
-      description: "We meet all your printing needs with efficiency and professionalism.",
+      description: "We deliver across the Kingdom at no cost to you.",
       buttonText: "Contact us via WhatsApp",
       buttonLink: "https://api.whatsapp.com/send/?phone=966530963426&text&type=phone_number&app_absent=0",
     },
@@ -33,7 +33,7 @@ const slidesContent = {
     {
       image: sider,
       title: "نبدع في صناعة الفكرة لتنال رضاكم",
-      description: "نحن نلبي جميع احتياجات الطباعة بكفاءة واحترافية",
+      description: " نوفر التوصيل المجاني لجميع أنحاء المملكة",
       buttonText: "تواصل معنا عبر الواتساب",
       buttonLink: "https://api.whatsapp.com/send/?phone=966530963426&text&type=phone_number&app_absent=0",
     },

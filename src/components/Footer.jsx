@@ -9,22 +9,6 @@ const Footer = ({ language }) => {
     <footer className="bg-gray-800 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-center items-center text-center space-y-8 md:space-y-0 md:space-x-8">
-          {/* Company Section */}
-          <div className="w-full md:w-1/3">
-            <h2 className="text-lg font-semibold">
-              {isEnglish ? 'Company' : 'الشركة'}
-            </h2>
-            <p className="mt-2">
-              {isEnglish
-                ? 'Your company description goes here. Add links, or any other content relevant to your footer.'
-                : 'هنا وصف شركتك. أضف الروابط أو أي محتوى آخر ذو صلة بالصفحة السفلية.'}
-            </p>
-            <p className="mt-2">
-              <strong>{isEnglish ? 'Address:' : 'العنوان:'}</strong> 
-              {isEnglish ? 'Saudi Arabia, Riyadh' : 'المملكة العربية السعودية، الرياض'}
-            </p>
-          </div>
-
           {/* Links Section */}
           <div className="w-full md:w-1/3">
             <h2 className="text-lg font-semibold">{isEnglish ? 'Links' : 'روابط'}</h2>
@@ -79,7 +63,7 @@ const Footer = ({ language }) => {
 
         <div className="text-center mt-6">
           <p>
-            &copy; 2024 {isEnglish ? 'Your Company Name. All rights reserved.' : 'اسم شركتك. جميع الحقوق محفوظة.'}
+            &copy; 2024 {isEnglish ? 'Almomayz Printing. All rights reserved.' : 'مطابع المميز. جميع الحقوق محفوظة.'}
           </p>
         </div>
       </div>

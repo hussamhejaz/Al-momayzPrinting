@@ -40,7 +40,7 @@ const ClientsSection = ({ language }) => {
               whileHover={{ scale: 1.1 }} // Scale up on hover
               initial={{ opacity: 0, y: 50 }} // Start with logo hidden and below the view
               whileInView={{ opacity: 1, y: 0 }} // Animate when logo comes into view
-              transition={{ duration: 0.5, delay: index * 0.2 }} // Staggered fade-in effect
+              transition={{ duration: 0.5, delay: index * 0.05 }} // Staggered fade-in effect
             >
               <img
                 src={client.logo}

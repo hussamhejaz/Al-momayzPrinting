@@ -1,5 +1,4 @@
 import React, { useState, useCallback, memo } from "react";
-import { Link as ScrollLink } from "react-scroll";
 import logo from "../imgs/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
@@ -30,12 +29,7 @@ const LanguageOptions = memo(({ onSelect, className = "" }) => {
 });
 
 function Navbar({ language, toggleLanguage }) {
-  const [isOpen, setIsOpen] = useState(false);
   const [showLanguageOptions, setShowLanguageOptions] = useState(false);
-
-  const toggleMenu = useCallback(() => {
-    setIsOpen((prev) => !prev);
-  }, []);
 
   const toggleLanguageOptions = useCallback(() => {
     setShowLanguageOptions((prev) => !prev);
@@ -49,8 +43,6 @@ function Navbar({ language, toggleLanguage }) {
     [toggleLanguage]
   );
 
-  const isEnglish = language === "en";
-
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -61,42 +53,8 @@ function Navbar({ language, toggleLanguage }) {
           </a>
         </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 items-center">
-          <ScrollLink
-            to="home"
-            smooth={true}
-            duration={1000}
-            className="text-gray-700 hover:text-blue-500 cursor-pointer"
-          >
-            {isEnglish ? "Home" : "الرئيسية"}
-          </ScrollLink>
-          <ScrollLink
-            to="about"
-            smooth={true}
-            duration={1000}
-            className="text-gray-700 hover:text-blue-500 cursor-pointer"
-          >
-            {isEnglish ? "About" : "من نحن"}
-          </ScrollLink>
-          <ScrollLink
-            to="services"
-            smooth={true}
-            duration={1000}
-            className="text-gray-700 hover:text-blue-500 cursor-pointer"
-          >
-            {isEnglish ? "Services" : "الخدمات"}
-          </ScrollLink>
-          <ScrollLink
-            to="contact"
-            smooth={true}
-            duration={1000}
-            className="text-gray-700 hover:text-blue-500 cursor-pointer"
-          >
-            {isEnglish ? "Contact" : "اتصل بنا"}
-          </ScrollLink>
-
-          {/* Language Switcher (Desktop) */}
+        {/* Desktop Menu: Language Switcher Only */}
+        <div className="hidden md:flex items-center">
           <div className="relative">
             <button
               onClick={toggleLanguageOptions}
@@ -111,9 +69,8 @@ function Navbar({ language, toggleLanguage }) {
           </div>
         </div>
 
-        {/* Mobile Menu Button and Language Switcher */}
-        <div className="md:hidden flex items-center space-x-4">
-          {/* Language Icon (Mobile) */}
+        {/* Mobile: Language Switcher Only */}
+        <div className="md:hidden flex items-center">
           <button
             onClick={toggleLanguageOptions}
             aria-label="Toggle language options"
@@ -124,77 +81,8 @@ function Navbar({ language, toggleLanguage }) {
           {showLanguageOptions && (
             <LanguageOptions onSelect={handleLanguageSelection} className="absolute top-16 right-4 w-32" />
           )}
-
-          {/* Hamburger Menu Toggle Button */}
-          <button
-            onClick={toggleMenu}
-            aria-label="Toggle navigation menu"
-            className="text-gray-700 hover:text-blue-500 focus:outline-none relative z-20"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              )}
-            </svg>
-          </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <ScrollLink
-            to="home"
-            smooth={true}
-            duration={1000}
-            className="block px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer"
-          >
-            {isEnglish ? "Home" : "الرئيسية"}
-          </ScrollLink>
-          <ScrollLink
-            to="services"
-            smooth={true}
-            duration={1000}
-            className="block px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer"
-          >
-            {isEnglish ? "Services" : "الخدمات"}
-          </ScrollLink>
-          <ScrollLink
-            to="about"
-            smooth={true}
-            duration={1000}
-            className="block px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer"
-          >
-            {isEnglish ? "About" : "من نحن"}
-          </ScrollLink>
-          <ScrollLink
-            to="contact"
-            smooth={true}
-            duration={1000}
-            className="block px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer"
-          >
-            {isEnglish ? "Contact" : "اتصل بنا"}
-          </ScrollLink>
-        </div>
-      )}
     </nav>
   );
 }

@@ -1,21 +1,4 @@
 import React, { useState } from "react";
-import advertisinggifts from "../ServicesImgs/advertisinggifts.jpg";
-import Brochure from "../ServicesImgs/Brochure.jpg";
-import Paperbills from "../ServicesImgs/Paperbills.jpg";
-import pens from "../ServicesImgs/pens.jpg";
-import stands from "../ServicesImgs/stands.jpg";
-import Tags from "../ServicesImgs/Tags.jpg";
-import stickers from "../ServicesImgs/stickers.jpg";
-import cards from "../ServicesImgs/cards.jpg";
-import cup from "../ServicesImgs/cup.jpg";
-import Envelopes from "../ServicesImgs/Envelopes.jpg";
-import Nametagbrooch from "../ServicesImgs/Nametagbrooch.jpg";
-import Acrylic from "../ServicesImgs/Acrylic.jpg";
-import stamps from "../ServicesImgs/stamps.jpg";
-import box from "../ServicesImgs/box.jpg";
-import bags from "../ServicesImgs/bags.jpg";
-import Theribbons from "../ServicesImgs/Theribbons.jpg";
-import Brochures from "../ServicesImgs/Brochures.jpg";
 
 // English and Arabic content for services
 const servicesContent = {
@@ -24,102 +7,102 @@ const servicesContent = {
       title: "Box Printing",
       description:
         "Box printing is a popular way to advertise products and promote them.",
-      imageUrl: box,
+      imageUrl: "/ServicesImgs/box.jpg",
     },
     {
       title: "Bag Printing",
       description:
         "Bag printing is the process of producing bags that carry a specific design or logo.",
-      imageUrl: bags,
+      imageUrl: "/ServicesImgs/bags.jpg",
     },
     {
       title: "Card Printing",
       description:
         "Business or thank you cards help build trust with clients or thank them for purchases.",
-      imageUrl: cards,
+      imageUrl: "/ServicesImgs/cards.jpg",
     },
     {
       title: "Sticker Printing",
       description:
         "Stickers are a highly efficient and affordable marketing tool.",
-      imageUrl: stickers,
+      imageUrl: "/ServicesImgs/stickers.jpg",
     },
     {
       title: "Stamp Printing",
       description:
         "Stamp printing is important and widely used for both personal and corporate purposes.",
-      imageUrl: stamps,
+      imageUrl: "/ServicesImgs/stamps.jpg",
     },
     {
       title: "Cup Printing",
       description:
         "Cup printing is an effective and affordable way to advertise your business.",
-      imageUrl: cup,
+      imageUrl: "/ServicesImgs/cup.jpg",
     },
     {
       title: "Flyer Printing",
       description:
         "Flyers are a cost-effective marketing tool to distribute promotional messages.",
-      imageUrl: Brochures,
+      imageUrl: "/ServicesImgs/Brochures.jpg",
     },
     {
       title: "Invoice Printing",
       description:
         "Customize your invoices with eye-catching designs that represent your brand.",
-      imageUrl: Paperbills,
+      imageUrl: "/ServicesImgs/Paperbills.jpg",
     },
     {
       title: "Envelope Printing",
       description:
         "Envelopes represent your company and can convey your brand’s professionalism.",
-      imageUrl: Envelopes,
+      imageUrl: "/ServicesImgs/Envelopes.jpg",
     },
     {
       title: "Stand Printing",
       description:
         "Roll-up stands are an advertising tool for products and services.",
-      imageUrl: stands,
+      imageUrl: "/ServicesImgs/stands.jpg",
     },
     {
       title: "Ribbon Printing",
       description:
         "Ribbon printing adds a personalized touch to your gifts and special occasions.",
-      imageUrl: Theribbons,
+      imageUrl: "/ServicesImgs/Theribbons.jpg",
     },
     {
       title: "Brochure Printing",
       description:
         "Brochures are paper documents used for company or product promotion.",
-      imageUrl: Brochure,
+      imageUrl: "/ServicesImgs/Brochure.jpg",
     },
     {
       title: "Tag Printing",
       description: "Elegant multi-use tags that fit your needs.",
-      imageUrl: Tags,
+      imageUrl: "/ServicesImgs/Tags.jpg",
     },
     {
       title: "Pen Printing",
       description:
         "Printed pens are a popular marketing tool to attract client attention.",
-      imageUrl: pens,
+      imageUrl: "/ServicesImgs/pens.jpg",
     },
     {
       title: "Badge Printing",
       description:
         "We design and print badges in various sizes and shapes to match your style.",
-      imageUrl: bags,
+      imageUrl: "/ServicesImgs/bags.jpg",
     },
     {
       title: "Gift Printing",
       description:
         "Promotional gifts are free items given by a company to employees or customers.",
-      imageUrl: advertisinggifts,
+      imageUrl: "/ServicesImgs/advertisinggifts.jpg",
     },
     {
       title: "Acrylic Printing",
       description:
         "Acrylic signs are elegant pieces used to display labels and signs clearly and attractively.",
-      imageUrl: Acrylic,
+      imageUrl: "/ServicesImgs/Acrylic.jpg",
     },
   ],
   ar: [
@@ -127,103 +110,103 @@ const servicesContent = {
       title: "طباعة بوكسات",
       description:
         "تعد الطباعة على العلب المصنوعة من الورق المقوى طريقة شائعة جدًا للإعلان عن المنتجات وتسويقها",
-      imageUrl: box,
+      imageUrl: "/ServicesImgs/box.jpg",
     },
     {
       title: "طباعة أكياس",
       description:
         "طباعة الاكياس هي عملية إنتاج أكياس تحمل تصميم أو شعار أو عبارة معينة. يتم استخدامها في العديد من المجالات التجارية.",
-      imageUrl: bags,
+      imageUrl: "/ServicesImgs/bags.jpg",
     },
     {
       title: "طباعة كروت",
       description:
         "بزنز كارت او كارت شكر تساعدك على بناء الثقة مع العملاء او شكرهم على الشراء من متجرك",
-      imageUrl: cards,
+      imageUrl: "/ServicesImgs/cards.jpg",
     },
     {
       title: "طباعة ستكرات لاصقة",
       description:
         "الاستكرات أو الملصقات هي شكل من أشكال أدوات التسويق عالية الكفاءة وذات سعر مناسب وغير مكلف",
-      imageUrl: stickers,
+      imageUrl: "/ServicesImgs/stickers.jpg",
     },
     {
       title: "طباعة أختام",
       description:
         "تعد طباعة الأختام من الطباعات المهمة والمنتشرة؛ وذلك لأن هذه الطباعة تستمد أهميتها من أهمية الأختام بشكل عام",
-      imageUrl: stamps,
+      imageUrl: "/ServicesImgs/stamps.jpg",
     },
     {
       title: "طباعة الأكواب",
       description:
         "الطباعة على الأكواب هي وسيلة فعالة من حيث التكلفة للإعلان عن عملك وبناء الوعي بالعلامة التجارية",
-      imageUrl: cup,
+      imageUrl: "/ServicesImgs/cup.jpg",
     },
     {
       title: "مطويات اعلانية",
       description:
         "النشرات الدعائية أو المطويات هي أحد الطرق الاقتصادية المُستخدمة في التسويق بغرض نشر وتوزيع رسالة تسويقية.",
-      imageUrl: Brochures,
+      imageUrl: "/ServicesImgs/Brochures.jpg",
     },
     {
       title: "فواتير - سندات ورقية",
       description:
         "إذا كنت تريد منح مراسلاتك الحياة ميزها بتصاميم جذابة تمثل هوية الشركة",
-      imageUrl: Paperbills,
+      imageUrl: "/ServicesImgs/Paperbills.jpg",
     },
     {
       title: "طباعة الأظرف",
       description:
         "الظرف لشركتك أو لعملك الخاص يعتبر واجهة معبرة عن عملك و مجال تخصصك",
-      imageUrl: Envelopes,
+      imageUrl: "/ServicesImgs/Envelopes.jpg",
     },
     {
       title: "طباعة استاند",
       description:
         "رول اب هو من أحد وسائل الدعاية والإعلان الذي يقدم رسالة اعلانية لكافة الخدمات أو المنتجات الخاصة",
-      imageUrl: stands,
+      imageUrl: "/ServicesImgs/stands.jpg",
     },
     {
       title: "طباعة الشرايط",
       description:
         "طباعة شرائط لهداياكم ومناسباتكم الخاصة لمسات بسيطة تجعل لحظاتكم مميزة",
-      imageUrl: Theribbons,
+      imageUrl: "/ServicesImgs/Theribbons.jpg",
     },
     {
       title: "طباعة بروشورات",
       description:
         "البروشور هو مستند ورقي إعلامي يمكن طيه في نشرة أو كتيب هذه المستندات المطبوعة عبارة عن قطع إعلانية.",
-      imageUrl: Brochure,
+      imageUrl: "/ServicesImgs/Brochure.jpg",
     },
     {
       title: "طباعة التاغات",
       description:
         "بطاقات متعددة الاستخدام , اشكال ومقاسات انيقة تناسب احتياجك",
-      imageUrl: Tags,
+      imageUrl: "/ServicesImgs/Tags.jpg",
     },
     {
       title: "طباعة اقلام",
       description:
         "من أشهر تلك الطرق المستخدمة، طباعة أقلام دعاية للشركات، فهي تقدم العديد من الاشكال والانواع للفت انتباه العميل",
-      imageUrl: pens,
+      imageUrl: "/ServicesImgs/pens.jpg",
     },
     {
       title: "طباعة بروش - نيم تاغ",
       description:
         "نقوم بتصميم و طباعة البروشات بأشكال و احجام تناسب اذواقكم بتصاميم ذات جودة عالية و فاخرة.",
-      imageUrl: Nametagbrooch,
+      imageUrl: "/ServicesImgs/Nametagbrooch.jpg",
     },
     {
       title: "طباعة هدايا اعلانية",
       description:
         "تعتبر الهدايا الدعائية من المنتجات المجانية التي تمنحها الشركة سنويًا أو شهريّا لموظفيها أو لعملائها.",
-      imageUrl: advertisinggifts,
+      imageUrl: "/ServicesImgs/advertisinggifts.jpg",
     },
     {
       title: "طباعة اكريلك",
       description:
         "لوحات اكريلك هي قطع مصنوعة من الأكريليك تستخدم لعرض التسميات واللافتات بشكل جذاب ومتين",
-      imageUrl: Acrylic,
+      imageUrl: "/ServicesImgs/Acrylic.jpg",
     },
   ],
 };

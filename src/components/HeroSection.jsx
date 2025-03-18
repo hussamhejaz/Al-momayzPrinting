@@ -35,7 +35,7 @@ const slidesContent = {
       title: "نبدع في صناعة الفكرة لتنال رضاكم",
       description: " نوفر التوصيل المجاني لجميع أنحاء المملكة",
       buttonText: "تواصل معنا عبر الواتساب",
-      buttonLink: "https://api.whatsapp.com/send/?phone=966530963426&text&type=phone_number&app_absent=0",
+      buttonLink: "https://api.whatsapp.com/send/?phone=966536525360&text&type=phone_number&app_absent=0",
     },
     {
       image: sider2,

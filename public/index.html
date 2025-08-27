@@ -1,21 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="utf-8" />
-    
+
+    <!-- Basic -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <title>مطبوعات المميز | Al-Momayz Printing</title>
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="مطبوعات المميز — حلول طباعة متكاملة بجودة عالية وأسعار منافسة مع توصيل داخل المملكة. Al-Momayz Printing: high-quality, fast, and affordable printing services across KSA."
     />
-    
+    <meta name="keywords" content="طباعة, مطابع, مطابع الرياض, مطابع جدة, تصميم, بروشور, ستكرات, هدايا دعائية, Printing, Flyers, Stickers, Gifts, KSA" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="author" content="Al-Momayz Printing" />
 
-    <title>مطبوعات المميز</title>
+    <!-- Canonical (replace with your production domain) -->
+    <link rel="canonical" href="https://example.com/" />
+
+    <!-- Favicons: use your logo.* in /public -->
+    <!-- If you have SVG -->
+<!-- Icons / Favicons (SVG only) -->
+<link rel="icon" href="%PUBLIC_URL%/logo.svg" type="image/svg+xml" />
+
+<!-- Optional fallbacks (safe to keep or remove) -->
+<link rel="alternate icon" href="%PUBLIC_URL%/favicon.ico" />
+<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+<!-- Optional: Safari pinned tab (uses a monochrome mask) -->
+<link rel="mask-icon" href="%PUBLIC_URL%/logo.svg" color="#0ea5e9" />
+
+<!-- Theme color for mobile UI chrome -->
+<meta name="theme-color" content="#ffffff" />
+
+    <!-- PWA / Manifest (optional, keep if you use CRA manifest) -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Preconnect (safe even if fonts not used yet) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="مطبوعات المميز | Al-Momayz Printing" />
+    <meta property="og:title" content="مطبوعات المميز | حلول طباعة متكاملة بجودة عالية" />
+    <meta property="og:description" content="خدمات طباعة احترافية بأسعار تنافسية وتوصيل داخل المملكة." />
+    <!-- Put an image at /public/seo/og-default.jpg (1200×630) -->
+    <meta property="og:image" content="%PUBLIC_URL%/seo/og-default.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Al-Momayz Printing — أعمال الطباعة" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:locale" content="ar_SA" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="مطبوعات المميز | حلول طباعة متكاملة بجودة عالية" />
+    <meta name="twitter:description" content="خدمات طباعة احترافية بأسعار تنافسية وتوصيل داخل المملكة." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/seo/og-default.jpg" />
+
+    <!-- JSON-LD: LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "مطبوعات المميز | Al-Momayz Printing",
+        "url": "https://example.com/",
+        "image": "%PUBLIC_URL%/seo/og-default.jpg",
+        "logo": "%PUBLIC_URL%/logo.png",
+        "telephone": "+966530963426",
+        "areaServed": { "@type": "Country", "name": "Saudi Arabia" },
+        "address": { "@type": "PostalAddress", "addressCountry": "SA" },
+        "description": "خدمات طباعة احترافية بجودة عالية وأسعار منافسة مع توصيل داخل المملكة.",
+        "sameAs": []
+      }
+    </script>
+
+    <!-- Optional: alternate language URLs if you have separate routes/pages
+    <link rel="alternate" hreflang="ar" href="https://example.com/ar/" />
+    <link rel="alternate" hreflang="en" href="https://example.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://example.com/" />
+    -->
+
+    <!-- Early lang/dir setter from saved preference to avoid layout shift -->
+    <script>
+      (function () {
+        try {
+          var lang = localStorage.getItem("site_lang") || "ar";
+          document.documentElement.lang = lang === "ar" ? "ar" : "en";
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {}
+      })();
+    </script>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>تحتاج إلى تفعيل JavaScript لتشغيل هذا الموقع.</noscript>
     <div id="root"></div>
-   
   </body>
 </html>

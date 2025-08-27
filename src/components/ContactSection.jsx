@@ -1,6 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const Ltr = ({ children, className = '' }) => (
+  <span
+    dir="ltr"
+    className={`inline-block whitespace-nowrap text-left ${className}`}
+    style={{ unicodeBidi: 'bidi-override' }}
+  >
+    {children}
+  </span>
+);
+
 const ContactSection = ({ language }) => {
   const isEnglish = language === 'en';
 
@@ -39,20 +49,22 @@ const ContactSection = ({ language }) => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
               {isEnglish ? 'Get in Touch' : 'تواصل معنا'}
             </h3>
+
             <div className="text-gray-700 text-center leading-relaxed space-y-4">
               <p>
                 <span className="font-semibold text-gray-900">
                   {isEnglish ? 'Phone:' : 'هاتف:'}
                 </span>
                 <br />
-                <a href="tel:+966536525360" className="hover:underline">
-                  +966 53 652 5360
+                <a href="tel:+966505907717" className="hover:underline">
+                  <Ltr>+966&nbsp;50&nbsp;590&nbsp;7717</Ltr>
                 </a>
                 <br />
                 <a href="tel:+966582184406" className="hover:underline">
-                  +966 58 218 4406
+                  <Ltr>+966&nbsp;58&nbsp;218&nbsp;4406</Ltr>
                 </a>
               </p>
+
               <p>
                 <span className="font-semibold text-gray-900">
                   {isEnglish ? 'Address:' : 'العنوان:'}

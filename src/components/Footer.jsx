@@ -68,7 +68,7 @@ const Footer = ({ language = "en" }) => {
             <ul className="mt-3 space-y-2">
               <li>
                 <a
-                  href="https://api.whatsapp.com/send/?phone=966530963426&text&type=phone_number&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=966505907717&text&type=phone_number&app_absent=0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-green-400 inline-flex items-center justify-center md:justify-start gap-2"

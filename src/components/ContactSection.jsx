@@ -61,7 +61,7 @@ const ContactSection = ({ language }) => {
                 </a>
                 <br />
                 <a href="tel:+966582184406" className="hover:underline">
-                  <Ltr>+966&nbsp;58&nbsp;218&nbsp;4406</Ltr>
+                  <Ltr>+966&nbsp;53&nbsp;652&nbsp;5360</Ltr>
                 </a>
               </p>
 

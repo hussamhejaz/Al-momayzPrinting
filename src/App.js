@@ -46,7 +46,7 @@ function App() {
   // WhatsApp Icon (same for mobile and desktop)
   const whatsappIcon = (
     <a
-      href="https://api.whatsapp.com/send/?phone=966536525360&text&type=phone_number&app_absent=0"
+      href="https://api.whatsapp.com/send/?phone=966505907717&text&type=phone_number&app_absent=0"
       className="fixed bottom-8 right-8 z-50"
       target="_blank"
       rel="noopener noreferrer"
